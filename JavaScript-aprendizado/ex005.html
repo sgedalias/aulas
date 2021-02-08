@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: rgb(80, 143, 165);
+            color: white;
+            font: normal 18pt Arial;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Estudos em DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div id='msg'>Clique em mim</div>
+    <script>
+        var d = window.document.getElementById('msg')
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[0];   //[0] é o primeiro parágrafo selecionado.
+//        window.document.write('Está escrito assim: ' + p1.innerText);  //seleciona e escreve p.
+//        p1.style.color = 'blue';  //modifica cor de p.           \innerText só texto
+//                                  //                              \innerHtml seleciona todas as tags tbm 
+//        corpo.style.background = 'black'
+        //d.style.background = 'green'
+        d.innerText = "Estou aguardando..."
+        var d = window.document.querySelector('div#msg')  // ou 'div.msg'  >> o . seleciona classe e o # a tag.
+        d.style.color = 'blue'        //querySelector só nos navegadores mais recentes.
+    </script>
+</body>
+</html>
+
+<!-- 
+    Árvore DOM
+
+
+           window
+       /     |      \
+location  document  history
+             |
+            html   >>>> parent de body e child de document
+            / \
+        head   body
+        /  |      |
+    meta title    |
+                  |
+             h1 p p div
+                  |
+                 strong     
+-->
