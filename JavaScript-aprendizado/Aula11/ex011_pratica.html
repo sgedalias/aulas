@@ -15,13 +15,14 @@
 
     <script type="text/javascript">
         function verificar() {
-            var pais = window.document.getElementById('txtPais')
+            var pais = document.getElementById('txtPais').value
+            var nac = 'Brasileiro'
+            var nac2 = 'Estrangeiro'
 
-            if (pais = 'Brasil') {
-                document.querySelector("div#divResultado").innerText = `Brasileiro`
+            if (pais == 'Brasil') {
+                document.querySelector("div#divResultado").innerHTML = `Cidadão é <strong>${nac}</strong>.`
             } else {
-                // AINDA NÃO ENTENDI ISSO. ESTUDANDO...
-            }
+                document.querySelector("div#divResultado").innerHTML = `Cidadão é <strong>${nac2}</strong>.`            }
         }
     </script>
 </body>
