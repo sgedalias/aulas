@@ -11,19 +11,16 @@
     País é: <input type="text" name="txtpais" id="txtPais"/>.
     <input type="button" value="Verificar" onclick="verificar()">
 
-    <div id="divResultado">
-    </div>
+    <div id="divResultado">é</div>
 
     <script type="text/javascript">
-        function verificar(){
-            var pais = document.getElementById("txtPais").value;
-            var nac1 = documento.getElementById('Brasileiro';
-            var nac2 = 'Estrangeiro';
+        function verificar() {
+            var pais = window.document.getElementById('txtPais')
 
             if (pais = 'Brasil') {
-                nac1.innerText = 'Cidadão é <strong>BRASILEIRO</strong>.'
+                document.querySelector("div#divResultado").innerText = `Brasileiro`
             } else {
-                nac2.innerText = 'Cidadão é <strong>ESTRANGEIRO</strong>.';
+                // AINDA NÃO ENTENDI ISSO. ESTUDANDO...
             }
         }
     </script>
